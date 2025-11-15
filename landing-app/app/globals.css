@@ -1,0 +1,112 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+}
+
+.glass-panel {
+  @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl shadow-soft-glow;
+}
+
+.card {
+  @apply rounded-2xl border border-white/10 bg-slate-900/60 p-6;
+}
+
+.section {
+  @apply py-12 md:py-16;
+}
+
+.section-title {
+  @apply text-3xl md:text-4xl font-semibold tracking-tight;
+}
+
+.section-subtitle {
+  @apply text-base text-slate-300 mt-4 leading-relaxed;
+}
+
+.pill {
+  @apply inline-flex items-center rounded-full border border-white/15 px-3 py-1 text-xs uppercase tracking-[0.2em] text-slate-300;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-emerald-300 via-amber-200 to-purple-400;
+}
+
+.surface-card {
+  @apply rounded-3xl border border-white/10 bg-white/5 backdrop-blur;
+}
+
+.info-banner {
+  @apply rounded-2xl border border-white/10 bg-gradient-to-r from-white/10 via-white/5 to-transparent px-5 py-4 text-sm leading-relaxed text-slate-100 shadow-[0_12px_40px_rgba(5,7,18,0.4)];
+}
+
+.info-banner a {
+  @apply underline decoration-dotted text-slate-100;
+}
+
+.hero-step {
+  @apply flex items-start gap-4 rounded-2xl border border-white/10 bg-white/5 px-4 py-3 text-sm text-slate-100 shadow-[inset_0_1px_0_rgba(255,255,255,0.05)];
+}
+
+.hero-step-number {
+  @apply flex h-8 w-8 items-center justify-center rounded-2xl bg-gradient-to-br from-white/20 to-white/5 font-semibold text-slate-900;
+}
+
+.surface-card-muted {
+  @apply rounded-2xl border border-white/5 bg-white/5 backdrop-blur text-slate-100;
+}
+
+
+@layer base {
+  :root {
+    --background: 220 47% 6%;
+    --foreground: 210 40% 96%;
+    --card: 222 36% 10%;
+    --card-foreground: 210 40% 96%;
+    --popover: 222 36% 10%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 156 72% 67%;
+    --primary-foreground: 210 40% 8%;
+    --secondary: 261 83% 79%;
+    --secondary-foreground: 222 36% 10%;
+    --muted: 222 24% 18%;
+    --muted-foreground: 220 14% 70%;
+    --accent: 222 24% 18%;
+    --accent-foreground: 210 40% 96%;
+    --destructive: 0 80% 56%;
+    --destructive-foreground: 210 40% 96%;
+    --border: 222 24% 18%;
+    --input: 222 24% 18%;
+    --ring: 210 40% 96%;
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+    --radius: 0.75rem;
+  }
+}
+
+
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+    background-image: radial-gradient(
+        circle at 10% 20%,
+        rgba(124, 93, 255, 0.25),
+        transparent 40%
+      ),
+      radial-gradient(
+        circle at 80% 0%,
+        rgba(61, 213, 152, 0.25),
+        transparent 45%
+      );
+    min-height: 100vh;
+  }
+}
